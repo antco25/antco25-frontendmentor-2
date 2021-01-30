@@ -1,0 +1,7 @@
+@import '../Utility/utility.scss';
+
+.card {
+    background-color: $background-secondary;
+    border-radius: $s-16;
+    box-shadow: 0 $s-6 $s-12 $s-4 $background-shadow;
+}

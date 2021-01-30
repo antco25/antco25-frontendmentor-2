@@ -1,0 +1,329 @@
+@import '../../components/Utility/utility.scss';
+
+/* GENERAL */
+
+$font-size-default: $s-14;
+$font-size-title: $s-28;
+$font-size-desc: $s-15;
+$font-size-pricing: $s-32;
+$font-size-discount: $s-10;
+
+.App {
+  background-image: url('./bg-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-default;
+}
+
+/* TITLE SECTION */
+$title-height: 13rem; //208px
+$title-spacing: $s-16;
+
+.App #title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: $title-height;
+
+  background-image: url('./pattern-circles.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+    > * {
+      margin: 0;
+    }
+
+    h1 {
+      color: $text-primary;
+      font-size: $font-size-title;
+      padding-bottom: $title-spacing;
+    }
+
+    p {
+      color: $text-secondary;
+      font-size: $font-size-desc;
+    }
+}
+
+
+/* GENERAL CONTENT SECTION */
+$card-min-width: 37rem; //592px
+$card-vertical-padding: $s-40;
+$card-horizontal-padding: $s-44;
+$slider-vertical-padding: $s-32;
+$content-vertical-padding: $s-24;
+
+.App #content {
+  color: $text-secondary;
+  min-width: $card-min-width;
+  padding-bottom: $card-vertical-padding;
+
+  .pricing-info, .slider-wrap, .billing, footer {
+    padding-left: $card-horizontal-padding;
+    padding-right: $card-horizontal-padding;
+  }
+
+  .pricing-info {
+    padding-top: $card-vertical-padding;
+  }
+
+  .slider-wrap {
+    box-sizing: border-box;
+    padding-top: $slider-vertical-padding;
+    padding-bottom: $slider-vertical-padding;
+  }
+
+  .billing {
+    padding-bottom: $content-vertical-padding;
+  }
+
+  footer {
+    padding-top: $content-vertical-padding;
+    padding-bottom: $card-vertical-padding;
+  }
+
+  hr {
+    border-color: $background-shadow;
+    margin: 0;
+  }
+
+  .slider-mobile {
+    display: none;
+  }
+
+  .slider-desktop {
+    display: block;
+  }
+}
+
+
+/* PRICING INFO */
+.App #content .pricing-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size-desc;
+
+  .pageviews, .price {
+    display: inline-block;
+  }
+
+  .pageviews {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: $s-2;
+  }
+
+  .price strong {
+    color: $text-primary;
+    font-size: $font-size-pricing;
+    vertical-align: middle;
+    padding-right: $s-4;
+  }
+}
+
+/* BILLING SECTION */
+.App #content .billing {
+  display: flex;
+  align-items: center;
+
+  p {
+    display: inline-block;
+    margin: 0;
+    flex: 1;
+  }
+
+  .billing-monthly {
+    text-align: end;
+  }
+
+  .billing-yearly {
+    text-align: left;
+  }
+
+  .toggle-wrap {
+    display: inline-block;
+    padding: 0 $s-16;
+  }
+  
+  .discount {
+    font-size: $font-size-discount;
+    padding: $s-2 $s-8;
+    margin-left: $s-4;
+    border-radius: $font-size-discount;
+    background-color: $discount-secondary;
+    color: $discount-primary;
+  }
+}
+
+/* FOOTER */
+.App #content footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  #footer-info {
+    ul {
+      margin: 0;
+      padding: 0;
+      padding-left: $s-18;
+      text-align: left;
+      list-style-image: url('./icon-check.svg');
+
+      li {
+        padding: $s-6;
+      }
+    }
+  }
+
+  #cta {
+    button {
+      background-color: $cta-background;
+      border: none;
+      border-radius: $s-24;
+      padding: $s-16 $s-44;
+      color: $cta-primary;
+      font-family: inherit;
+      font-size: $font-size-default;
+
+      &:hover {
+        color: $cta-active;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* RESPONSIVE */
+
+//768px - 576px;
+@media only screen and (max-width: $breakpoint-3) {
+
+  /* PADDING */
+  $b3-card-min-width: 28rem; //448px
+  $b3-card-vertical-padding: $s-40;
+  $b3-card-horizontal-padding: $s-20;
+  $b3-slider-vertical-padding: $s-20;
+  $b3-content-vertical-padding: $s-20;
+
+  .App {
+    background-size: 200% 50%;
+  }
+  
+  .App #content {
+    min-width: $b3-card-min-width;
+
+    .pricing-info, .slider-wrap, .billing, footer {
+      padding-left: $b3-card-horizontal-padding;
+      padding-right: $b3-card-horizontal-padding;
+    }
+
+    .pricing-info {
+      padding-top: $b3-card-vertical-padding;
+    }
+
+    .slider-wrap {
+      padding-top: $b3-slider-vertical-padding;
+      padding-bottom: $b3-slider-vertical-padding;
+      width: 100%;
+    }
+
+    .billing {
+      padding-top: $b3-content-vertical-padding;
+      padding-bottom: $b3-content-vertical-padding;
+    }
+
+    footer {
+      padding-top: $b3-content-vertical-padding;
+      padding-bottom: $b3-card-vertical-padding;
+    }
+  }
+
+  /* FONT */
+  $b3-font-size-default: $s-12;
+  $b3-font-size-title: $s-20;
+  $b3-font-size-desc: $s-14;
+  $b3-font-size-pricing: $s-28;
+  $b3-font-size-discount: $s-10;
+
+  .App, .App #content footer #cta button {
+    font-size: $b3-font-size-default;
+  }
+
+  .App #title h1 {
+    font-size: $b3-font-size-title;
+  }
+
+  .App #title p, .App #content .pricing-info {
+    font-size: $b3-font-size-desc;
+  }
+
+  .App #content .pricing-info .price strong {
+      font-size: $b3-font-size-pricing;
+  }
+
+  .App #content .billing .discount {
+      font-size: $b3-font-size-discount;
+  }
+
+}
+
+
+//576px - 375px;
+@media only screen and (max-width: $breakpoint-4) {
+
+  /* PADDING */
+  $b4-card-min-width: 350px; //320px
+  
+  .App #content {
+    min-width: $b4-card-min-width;
+  }
+}
+
+//375px
+@media only screen and (max-width: $breakpoint-mobile) {
+
+  .App #content {
+    .pricing-info, footer {
+      flex-direction: column;
+    }
+  } 
+
+  /* PADDING - MOBILE */
+  $m-card-min-width: 20rem; //320px
+  $m-content-vertical-padding: $s-20;
+
+  .App {
+    min-width: $breakpoint-mobile;
+    background-size: 100% 50%;
+  }
+  
+  .App #content {
+    width: $m-card-min-width;
+    min-width: $m-card-min-width;
+
+    footer #footer-info {
+        padding-bottom: $m-content-vertical-padding;
+    }
+  }
+
+  /* MISC */
+  .App #title p {
+    max-width: 12.5rem; //200px
+  }
+
+  .App #content footer #footer-info ul {
+    text-align: center;
+  }
+
+}
+
+

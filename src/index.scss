@@ -1,0 +1,10 @@
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+@import './components/Utility/utility.scss';
+body {
+  margin: 0;
+  font-family: 'Manrope', Arial, sans-serif;
+  background-color: $background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

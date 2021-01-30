@@ -1,0 +1,50 @@
+//Colors
+$neutral: white;
+$background:hsl(230, 100%, 99%);
+$background-secondary: $neutral;
+$background-shadow: rgba(0,0,0,0.1);
+
+$discount-secondary: hsl(14, 92%, 95%);
+$discount-primary: hsl(15, 100%, 70%);
+
+$slider-primary: hsl(174, 77%, 80%);
+$slider-active: hsl(174, 86%, 45%);
+$slider-background: hsl(224, 65%, 95%);
+
+$toggle-background: hsl(223, 50%, 87%);
+$toggle-background-active: $slider-primary;
+
+$text-primary: hsl(227, 35%, 25%);
+$text-secondary: hsl(225, 20%, 60%);
+
+$cta-background: $text-primary;
+$cta-primary: hsl(226, 100%, 87%);
+$cta-active: $neutral;
+
+//Sizes, assuming 1rem = 16px
+$s-2: 0.125rem; //2px
+$s-4: 0.25rem; //4px
+$s-6: 0.375rem; //6px
+$s-8: 0.5rem; //8px
+$s-10: 0.625rem; //10px
+$s-12: 0.75rem; //12px
+$s-14: 0.875rem; //14px
+$s-15: 0.9375rem; //15px
+$s-16: 1rem; //16px
+$s-18: 1.125rem; //18px
+$s-20: 1.25rem; //20px
+$s-24: 1.5rem; // 24px
+$s-28: 1.75rem; //28px
+$s-32: 2rem; //32px
+$s-40: 2.5rem; //40px
+$s-44: 2.75rem; //44px
+$s-48: 3rem; //48px
+
+//Breakpoints
+$breakpoint-0: 1440px;
+$breakpoint-1: 1100px;
+$breakpoint-2: 992px;
+$breakpoint-3: 768px;
+$breakpoint-4: 576px;
+$breakpoint-mobile: 375px;
+

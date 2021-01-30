@@ -1,0 +1,14 @@
+.rangeSlider {
+    /* The slider handle */
+    .slider::-webkit-slider-thumb {
+        background-image: url('./icon-slider.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    
+      .slider::-moz-range-thumb {
+        background-image: url('./icon-slider.svg');
+        background-repeat: no-repeat;
+        background-position: center; 
+      }
+}
